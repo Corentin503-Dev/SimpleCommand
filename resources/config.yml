@@ -1,0 +1,21 @@
+no_perm_message: "§cVous n'avez pas la permission d'utiliser {command}"
+
+commands:
+  spawn:
+    name: "spawn"
+    description: "Permet de se teleporter au spawn"
+    usage: "/spawn"
+    aliases: ["swn"]
+    permission: "no"
+    teleport: "0:100:0:world"
+    transfer: "no"
+    message: "§aVous avez bien été téleporté au spawn"
+  lobby:
+    name: "lobby"
+    description: "Permet de se faire transferer au lobby"
+    usage: "/lobby"
+    aliases: ["hub", "lobbies"]
+    permission: "lobby.use"
+    teleport: "no"
+    transfer: "zeldorium.eu:19132"
+    message: ""
