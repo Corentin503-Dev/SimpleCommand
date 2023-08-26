@@ -48,6 +48,8 @@ class SimpleTeleportCommand extends Command
             switch ($this->type) {
                 case "teleport":
                     $explode = explode(":", $this->teleport);
+                    
+                    if (!Server::getInstance()->getWorldManager()->isWorldLoaded($explode[3])) Server::getInstance()->getWorldManager()->loadWorld($explode[3]);
                     $loc = new Location($explode[0], $explode[1], $explode[2], Server::getInstance()->getWorldManager()->getWorldByName($explode[3]), 0, 0);
                     $sender->teleport($loc);
                     break;
